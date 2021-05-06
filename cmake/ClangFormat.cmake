@@ -27,7 +27,8 @@ function(prefix_clangformat_setup prefix)
     COMMAND
       ${CLANGFORMAT_EXECUTABLE}
       -style=file
-      -i
+      --dry-run
+      --Werror
       ${clangformat_sources}
     WORKING_DIRECTORY
       ${CMAKE_SOURCE_DIR}
